@@ -1,0 +1,137 @@
+body {
+  background: rgb(255, 252, 161);
+  background: radial-gradient(circle, rgba(255, 252, 161, 1) 0%, rgba(255, 162, 162, 1) 100%);
+  font-family: 'Pathway Extreme', sans-serif;
+}
+
+.grid-head{
+ text-align: center
+}
+
+.grid-text,
+.grid-text1,
+.grid-text2,
+.grid-text3 {
+  text-align: justify;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.grid-svg img,
+.grid-svg1 img,
+.grid-svg2 img,
+.grid-svg3 img,
+.svg1 img,
+.svg2 img {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vote {
+  grid-area: vote;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 5px 12px 3px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 0.2fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+  gap: 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grid-head grid-head grid-head grid-head"
+    "grid-svg grid-svg grid-svg1 grid-svg1"
+    "grid-text grid-text grid-text1 grid-text1"
+    "grid-svg2 grid-svg2 grid-svg3 grid-svg3"
+    "grid-text2 grid-text2 grid-text3 grid-text3"
+    "svg1 vote vote svg2";
+}
+
+.heart {
+  margin-right: 42px;
+}
+
+.blinking-heart{
+  margin-right: 42px;
+}
+
+.grid-head {
+  grid-area: grid-head;
+}
+
+.grid-svg {
+  grid-area: grid-svg;
+}
+
+.grid-svg1 {
+  grid-area: grid-svg1;
+}
+
+.grid-text {
+  grid-area: grid-text;
+}
+
+.grid-svg2 {
+  grid-area: grid-svg2;
+}
+
+.grid-svg3 {
+  grid-area: grid-svg3;
+}
+
+.grid-text1 {
+  grid-area: grid-text1;
+}
+
+.grid-text2 {
+  grid-area: grid-text2;
+}
+
+.grid-text3 {
+  grid-area: grid-text3;
+}
+
+.svg1 {
+  grid-area: svg1;
+}
+
+.svg2 {
+  grid-area: svg2;
+}
+
+.vote {
+  grid-area: vote;
+}
+
+#svg-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking-heart {
+  animation: blink 1s infinite;
+}
+
